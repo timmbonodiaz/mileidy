@@ -1,4 +1,5 @@
 const CONTRACT = "0xB381567590EA051380E32CA618e5eb8A4A3cC983";
+const RPC_URL = "https://eth.llamarpc.com";
 
 const ABI = [
     "function MINT_PRICE() public view returns (uint256)",
@@ -12,16 +13,7 @@ let contract = null;
 let address = null;
 
 function init() {
-    provider = new ethers.providers.Web3Provider(window.ethereum);
-    contract = new ethers.Contract(CONTRACT, ABI, provider);
-
-    provider.provider.on('accountsChanged', function (accounts) {
-        address = accounts[0];
-        onConnect(true, address);
-    });
-
     fetchSupply();
-    hide('mintTable');
 }
 
 function hide(id) {
@@ -33,10 +25,9 @@ function show(id, display = 'block') {
 }
 
 async function fetchSupply() {
-    if(!contract) {
-        return console.error('contract not initialized');
-    }
-    const supply = await contract.totalSupply();
+    const rpc = new ethers.providers.JsonRpcProvider(RPC_URL);
+    const read = new ethers.Contract(CONTRACT, ABI, rpc);
+    const supply = await read.totalSupply();
     updateSupply(parseInt(supply));
 }
 
@@ -46,9 +37,18 @@ function updateSupply(supply) {
 }
 
 async function connect() {
-    if(!provider) {
-        return console.error('provider not initialized');
+    if(window.ethereum == null) {
+        alert('‧˚₊•┈┈┈୨ Please use an injected web3 wallet ୧┈┈┈•‧₊˚⊹');
+        return;
     }
+
+    provider = new ethers.providers.Web3Provider(window.ethereum);
+    contract = new ethers.Contract(CONTRACT, ABI, provider);
+
+    provider.provider.on('accountsChanged', function (accounts) {
+        address = accounts[0];
+        onConnect(true, address);
+    });
 
     const accounts = await provider.send('eth_requestAccounts', []);
     if(accounts.length > 0) {
