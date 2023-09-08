@@ -15,6 +15,11 @@ function init() {
     provider = new ethers.providers.Web3Provider(window.ethereum);
     contract = new ethers.Contract(CONTRACT, ABI, provider);
 
+    provider.provider.on('accountsChanged', function (accounts) {
+        address = accounts[0];
+        onConnect(true, address);
+    });
+
     fetchSupply();
     hide('mintTable');
 }
@@ -48,7 +53,7 @@ async function connect() {
     const accounts = await provider.send('eth_requestAccounts', []);
     if(accounts.length > 0) {
         address = accounts[0];
-        onConnect(true, accounts[0]);
+        onConnect(true, address);
     } else {
         address = null;
         onConnect(false, null);
