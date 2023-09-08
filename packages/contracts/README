@@ -1,0 +1,26 @@
+# contracts
+Milady meme derivative
+
+## solc version
+0.8.18
+
+## refs
+### evm
+https://ethereum.github.io/yellowpaper/paper.pdf
+https://ethervm.io
+
+### eip-721 - nft
+https://eips.ethereum.org/EIPS/eip-721
+
+## deps
+## solady
+https://github.com/vectorized/solady
+
+## tools
+### foundry
+https://book.getfoundry.sh/
+
+## deploys
+### mainnet
+AddressBook 0xFe64563b712958d05E1A2F5C95f7AE00A4c8EEc7
+Mileidy     0xB381567590EA051380E32CA618e5eb8A4A3cC983

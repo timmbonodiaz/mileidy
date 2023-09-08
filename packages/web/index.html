@@ -1,0 +1,117 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>☆ mileidy ☆</title>
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="https://cdn.jsdelivr.net/combine/npm/tone@14.7.58,npm/@magenta/music@1.23.1/es6/core.js,npm/focus-visible@5,npm/html-midi-player@1.5.0" type="text/javascript"></script>
+    <script src="https://cdn.ethers.io/lib/ethers-5.2.umd.min.js" type="application/javascript"></script>
+    <script src="js/script.js" type="text/javascript"></script>
+</head>
+
+<body background="img/stars.jpeg" bgcolor="black" text="#ffffff" link="#ffffff" vlink="#ffffff" onload="init()">
+    <center>
+        <img id="banner" src="img/banner.png" alt="mileidy banner" width="640px">
+        <h1 id="title">
+            <span style="font-size:16px">✧･ﾟ: *✧･ﾟ:*</span>
+            <span style="color:red">m</span>
+            <span style="color:orange">i</span>
+            <span style="color:yellow">l</span>
+            <span style="color:green">e</span>
+            <span style="color:blue">i</span>
+            <span style="color:indigo">d</span>
+            <span style="color:violet">y</span>
+            <span style="font-size:16px">*:･ﾟ✧*:･ﾟ✧</span>
+        </h1>
+        <p><em>Mileidy is a meme collection of 10k pfps inspired by Milady Maker</em></p>
+        <midi-player src="midi/lr_final.mid" sound-font loop></midi-player>
+
+        <h2 id="supply">? / 10000 minted</h2>
+
+        <table id="connectTable" border="8" bgcolor="white">
+            <tr>
+                <td>
+                    <font color="black">Connect your wallet to mint</font>
+                </td>
+                <td>
+                    <button id="connectButton" onclick="connect()">Connect Wallet</button>
+                </td>
+            </tr>
+        </table>
+
+        <table id="mintladyTable" border="8" bgcolor="white" style="display: none; color: black;">
+            <tr>
+                <td>
+                    <span id="address">not connected</span>
+                </td>
+                <td>
+                    <a href="https://etherscan.io/address/0x5Af0D9827E0c53E4799BB226655A1de152A425a5" target="_blank">milady</a>, <a href="https://etherscan.io/address/0xD3D9ddd0CF0A5F0BFB8f7fcEAe075DF687eAEBaB" target="_blank">remilio</a> and <a href="https://etherscan.io/address/0x8Fc0D90f2C45a5e7f94904075c952e0943CFCCfd" target="_blank">pixelady</a><br>owners can mint for free!!
+                </td>
+                <td>
+                    <button id="mintLadyButton" onclick="mintlady()">Loyal Milady Mint</button>
+                </td>
+            </tr>
+        </table>
+        <br>
+        <table id="mintTable" border="8" bgcolor="#ccc" style="display: none;">
+            <tr>
+                <td>
+                    <font color="black">Pay 0.003 ETH per mint</font>
+                </td>
+                <td>
+                    <button id="mint1" onclick="mint(1)">Mint 1</button>
+                </td>
+                <td>
+                    <button id="mint3" onclick="mint(3)">Mint 3</button>
+                </td>
+                <td>
+                    <button id="mint5" onclick="mint(5)">Mint 5</button>
+                </td>
+                <td>
+                    <button id="mint10" onclick="mint(10)">Mint 10</button>
+                </td>
+                <td>
+                    <button id="mint100" onclick="mint(100)">Mint 100</button>
+                </td>
+            </tr>
+        </table>
+
+        <code>
+            <h3><strong>BACKGROUND:</strong> milady sounds like milei+dy</h3>
+        </code>
+
+        <p>
+            <img src="img/wipbar.gif" alt="site under construction" width="256px" style="padding-bottom:16px">
+            <img src="img/wip.gif" alt="site under construction" width="128px">
+            <img src="img/wipbar.gif" alt="site under construction" width="256px" style="padding-bottom:16px">
+        </p>
+
+        <p>
+            <span>˚₊· ͟͟͞͞➳❥</span>
+            <a href="http://twitter.com/MileidyMaker" target="_blank" style="color:white">sign our guestbook</a>
+            <span> or say hi to </span>
+            <a href="https://discord.gg/UCbwgGXRfD" target="_blank" style="color:white">the webmaster</a>
+            <span> ✌(◕‿-)✌</span>
+        </p>
+
+        <p>
+            <a href="http://validator.w3.org/check?uri=referer">
+                <img src="img/valid-html401.png" alt="Valid HTML 4.01 Transitional" height="31" width="88">
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="img/vcss.gif" alt="Valid CSS!">
+            </a>
+            <a href="http://jigsaw.w3.org/css-validator/check/referer">
+                <img style="border:0;width:88px;height:31px" src="img/vcss-blue.gif" alt="Valid CSS!">
+            </a>
+        </p>
+
+        <marquee width="640px">
+            Everything Mileidy™ is copylefted under the Viral Public License
+        </marquee>
+    </center>
+</body>
+
+</html>

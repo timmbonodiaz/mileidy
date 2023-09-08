@@ -1,0 +1,48 @@
+*, *:hover, *:focus {
+    cursor: url("/img/cursor.png") 19 6, auto;
+}
+
+*:active {
+    cursor: url("/img/cursor2.png") 19 6, auto;
+}
+
+a:hover, button:hover {
+    cursor: url("/img/cursor3.png") 19 6, auto;
+}
+
+a {
+    color: blue;
+}
+
+a:visited {
+    color: purple;
+}
+
+#banner {
+    border: 2px solid black;
+}
+
+#title {
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    margin: 0;
+}
+
+#title span {
+    font-size: 64px;
+    margin: -6px;
+}
+
+midi-player {
+    height: 32px;
+    color: black;
+}
+
+td {
+    padding: 4px 8px;
+}
+
+button {
+    border-radius: 0;
+    padding: 8px;
+    font-size: 16px;
+}
