@@ -1,5 +1,5 @@
 # Mileidy
-Milady meme derivative
+Milady meme derivative - https://mileidy.site
 
 ## contracts
 simple erc721 developed using [solady](https://solady.org)
