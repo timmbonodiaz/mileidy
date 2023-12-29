@@ -62,14 +62,14 @@ async function connect() {
 
 async function onConnect(status, address) {
     if(status) {
-        show('mintladyTable', 'table');
-        show('mintTable', 'table');
+        //show('mintladyTable', 'table');
+        //show('mintTable', 'table');
         hide('connectTable');
         const shortAddress = address.substr(0, 6) + '...' + address.substr(-4);
         document.getElementById('address').innerText = `connected as: ${shortAddress}`;
     } else {
-        hide('mintladyTable');
-        hide('mintTable');
+        //hide('mintladyTable');
+        //hide('mintTable');
         show('connectTable', 'table');
         document.getElementById('address').innerText = `not connected`;
     }
